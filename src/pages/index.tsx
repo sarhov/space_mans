@@ -3,6 +3,7 @@ import Header from '../components/header'
 import AdvantageScreen from '../screens/advantage_screen'
 
 import FirstScreen from '../screens/first_screen'
+import FooterScreen from '../screens/footer_screen'
 import InfoScreen from '../screens/info_screen'
 import OurGamesScreen from '../screens/our_games_screen'
 import SpaceBackground from '../screens/space_background'
@@ -21,6 +22,7 @@ const IndexPage = () => {
         <OurGamesScreen />
         <AdvantageScreen />
       </SpaceBackground>
+      <FooterScreen />
     </>
   )
 }
