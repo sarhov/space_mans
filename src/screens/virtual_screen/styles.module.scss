@@ -1,0 +1,80 @@
+@import '../../styles/__variables.scss';
+
+.virtual__screen {
+  width: 100%;
+  height: calc(100vh + 150px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+
+  background: url('../../images/virtual_screen.png') no-repeat;
+  background-position: top center;
+
+  &__container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include container;
+  }
+
+  &_heading {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 62px;
+    text-transform: uppercase;
+
+    color: white;
+
+    &.green {
+      span {
+        background: $greenGradient;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  &_info {
+    max-width: 568px;
+    margin-top: 25px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: $gray;
+  }
+
+  &_content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      right: calc(100% + 14px);
+      width: 66px;
+      height: 62px;
+      background: url('../../images/moon.png') no-repeat;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -50px;
+    bottom: -190px;
+    width: 590px;
+    height: 760px;
+    background: url('../../images/moon_block.png') no-repeat;
+  }
+}

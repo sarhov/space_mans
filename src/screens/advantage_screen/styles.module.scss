@@ -1,0 +1,55 @@
+@import '../../styles/__variables.scss';
+
+.advantage__screen {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+
+  &__container {
+    display: grid;
+    position: relative;
+    column-gap: 90px;
+    justify-content: space-between;
+    grid-template-columns: calc(100% / 4) calc(100% / 4) calc(100% / 4);
+    grid-template-rows: 1fr;
+
+    &:nth-child(2) {
+      justify-content: center;
+      grid-template-columns: calc(100% / 4) calc(100% / 4);
+      margin-top: 90px;
+    }
+
+    @include container;
+  }
+
+  &_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h4 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 28px;
+      text-align: center;
+      color: $gray;
+      margin-top: 18px;
+    }
+  }
+}
