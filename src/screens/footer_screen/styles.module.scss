@@ -7,7 +7,8 @@
   align-items: center;
 
   background: url('../../images/footer_bg.png') no-repeat;
-  background-size: 100% 100%;
+  background-size: auto 100%;
+  background-position: center;
 
   &__form {
     display: flex;
