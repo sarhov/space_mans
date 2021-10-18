@@ -79,4 +79,39 @@
     background: url('../../images/moon_top.png') no-repeat;
     background-size: contain;
   }
+
+  @include breakpoints('1024') {
+    height: auto;
+    background-position: -40px -60px;
+    background-size: auto 50%;
+
+    &::after {
+      width: 350px;
+      height: 401px;
+    }
+
+    &__container {
+      margin-top: 350px;
+      padding-bottom: 200px;
+    }
+
+    &_heading {
+      font-size: 36px;
+      line-height: 42px;
+    }
+
+    &_info {
+      font-size: 24px;
+      line-height: 32px;
+      margin-top: 20px;
+    }
+
+    &_content {
+      &::before {
+        top: auto;
+        left: 0;
+        bottom: calc(100% + 20px);
+      }
+    }
+  }
 }

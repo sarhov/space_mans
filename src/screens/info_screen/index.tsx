@@ -2,17 +2,22 @@ import React from 'react'
 
 import clsx from 'clsx'
 
+import { useBreakpoint } from 'gatsby-plugin-breakpoints'
+
 import ufo from '../../images/ufo.png'
+import ufo_mobile from '../../images/ufo_mobile.png'
 import robots from '../../images/robots.png'
 
 import * as styles from './styles.module.scss'
 
 const InfoScreen = (): JSX.Element => {
+  const breakpoints = useBreakpoint()
+
   return (
     <div className={styles.info__screen}>
       <div className={styles.info__screen__container}>
         <div className={styles.info__screen__block}>
-          <img width={635} src={ufo} />
+          <img width={635} src={breakpoints.md ? ufo_mobile : ufo} />
           <div className={styles.info__screen__block_content}>
             <h2
               className={clsx(

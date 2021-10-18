@@ -1,10 +1,15 @@
 import React from 'react'
 
 import gnom from '../../images/gnom.png'
+import gnom_mobile from '../../images/gnom_mobile.png'
+
+import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 
 import * as styles from './styles.module.scss'
 
 const FirstScreen = (): JSX.Element => {
+  const breakpoints = useBreakpoint()
+
   const play = (
     <svg
       width="24"
@@ -35,7 +40,10 @@ const FirstScreen = (): JSX.Element => {
         <button className={styles.first__screen__watch}>
           {play}Watch video
         </button>
-        <img className={styles.first__screen__hero} src={gnom} />
+        <img
+          className={styles.first__screen__hero}
+          src={breakpoints.md ? gnom_mobile : gnom}
+        />
       </div>
     </div>
   )

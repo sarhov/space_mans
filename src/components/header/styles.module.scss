@@ -1,6 +1,7 @@
 @import '../../styles/_variables';
 
 .header {
+  width: 100%;
   top: 34px;
   left: 50%;
   z-index: 5;
@@ -76,6 +77,10 @@
         transform: translate(-50%, 0);
       }
     }
+
+    @include breakpoints('1024') {
+      display: none;
+    }
   }
 
   &__socials {
@@ -87,5 +92,9 @@
         margin-right: 10px;
       }
     }
+  }
+
+  @include breakpoints('1024') {
+    top: 30px;
   }
 }

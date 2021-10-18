@@ -17,7 +17,7 @@ const OurGamesScreen = (): JSX.Element => {
         <div className={styles.our_games__screen_header}>
           <h2>OUR GAMES</h2>
         </div>
-        <img src={logo_galaxy} />
+        <img className={styles.our_games__screen_galaxy} src={logo_galaxy} />
         <Swiper
           pagination={{
             el: '.pagination',

@@ -12,4 +12,24 @@ $greenGradient: linear-gradient(305deg, #a7ff23 -25.18%, #21fffd 100%);
 
 @mixin container() {
   width: 1400px;
+
+  @include breakpoints('1024') {
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+}
+
+@mixin breakpoints($point) {
+  @if $point == '1024' {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $point == '768' {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
 }
