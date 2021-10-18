@@ -9,21 +9,39 @@ import OurGamesScreen from '../screens/our_games_screen'
 import SpaceBackground from '../screens/space_background'
 import VirtualScreen from '../screens/virtual_screen'
 
-import '../styles/__app.scss'
+import ReactFullpage from '@fullpage/react-fullpage'
+
+import '../styles/__app.module.scss'
 
 const IndexPage = () => {
   return (
-    <>
-      <Header />
-      <FirstScreen />
-      <InfoScreen />
-      <VirtualScreen />
-      <SpaceBackground>
-        <OurGamesScreen />
-        <AdvantageScreen />
-      </SpaceBackground>
-      <FooterScreen />
-    </>
+    <ReactFullpage
+      scrollOverflow
+      scrollingSpeed={1000}
+      render={() => (
+        <div id="fullpage-wrapper">
+          <Header />
+          <div className="section">
+            <FirstScreen />
+          </div>
+          <div className="section">
+            <InfoScreen />
+          </div>
+          <div className="section">
+            <VirtualScreen />
+          </div>
+          <div className="section">
+            <SpaceBackground>
+              <OurGamesScreen />
+              <AdvantageScreen />
+            </SpaceBackground>
+          </div>
+          <div className="section fp-auto-height">
+            <FooterScreen />
+          </div>
+        </div>
+      )}
+    />
   )
 }
 

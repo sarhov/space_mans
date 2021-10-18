@@ -110,4 +110,16 @@
     height: 475px;
     background: url('../../images/moon_games.png') no-repeat;
   }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 498px;
+    height: 212px;
+    background: url('../../images/moon_bottom.png') no-repeat;
+    background-size: contain;
+  }
 }
