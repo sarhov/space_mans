@@ -100,10 +100,12 @@
     box-sizing: border-box;
     padding-bottom: 50px;
     align-items: flex-end;
-    background: url('../../images/first_screen_mobile.png') no-repeat top left;
 
     &::after {
-      display: none;
+      bottom: auto;
+      top: 0;
+      background: url('../../images/first_screen_mobile.png') no-repeat top left;
+      background-size: auto 100%;
     }
 
     &__hero {

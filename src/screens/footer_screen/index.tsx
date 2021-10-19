@@ -43,43 +43,45 @@ const FooterScreen = (): JSX.Element => {
 
   return (
     <div className={styles.footer__screen}>
-      <div className={styles.footer__screen__form}>
-        <h2 className={styles.footer__screen__form_heading}>Registration</h2>
-        <p className={styles.footer__screen__form_info}>
-          Register here to be one of the first to getaccess to the Super
-          Galactic Beta version.
-        </p>
-        <div className={styles.footer__screen__form_input}>
-          <input
-            className={styles.footer__screen__form_input_field}
-            placeholder="email"
-            value={input}
-            onChange={handleChange}
-          />
-          <button className={styles.footer__screen__form_input_button}>
-            {plane}
-          </button>
+      <div className={styles.footer__screen__container}>
+        <div className={styles.footer__screen__form}>
+          <h2 className={styles.footer__screen__form_heading}>Registration</h2>
+          <p className={styles.footer__screen__form_info}>
+            Register here to be one of the first to getaccess to the Super
+            Galactic Beta version.
+          </p>
+          <div className={styles.footer__screen__form_input}>
+            <input
+              className={styles.footer__screen__form_input_field}
+              placeholder="email"
+              value={input}
+              onChange={handleChange}
+            />
+            <button className={styles.footer__screen__form_input_button}>
+              {plane}
+            </button>
+          </div>
         </div>
+        <footer className={styles.footer__screen__footer}>
+          <nav className={styles.footer__screen__footer_socials}>
+            <Social>{telegram}</Social>
+            <Social>{discord}</Social>
+            <Social>{instagram}</Social>
+            <Social>{twitter}</Social>
+            <Social>{youtube}</Social>
+          </nav>
+          <div className={styles.footer__screen__footer_brands}>
+            {nvidia}
+            {youtube_2}
+            {riot}
+            {intel}
+            {facebook}
+          </div>
+          <span className={styles.footer__screen__footer_copy}>
+            UFOtoken.io © 2021, All rights reserved
+          </span>
+        </footer>
       </div>
-      <footer className={styles.footer__screen__footer}>
-        <nav className={styles.footer__screen__footer_socials}>
-          <Social>{telegram}</Social>
-          <Social>{discord}</Social>
-          <Social>{instagram}</Social>
-          <Social>{twitter}</Social>
-          <Social>{youtube}</Social>
-        </nav>
-        <div className={styles.footer__screen__footer_brands}>
-          {nvidia}
-          {youtube_2}
-          {riot}
-          {intel}
-          {facebook}
-        </div>
-        <span className={styles.footer__screen__footer_copy}>
-          UFOtoken.io © 2021, All rights reserved
-        </span>
-      </footer>
     </div>
   )
 }

@@ -24,7 +24,7 @@ const IndexPage = () => {
         <OurGamesScreen />
         <AdvantageScreen />
       </SpaceBackground>
-      {/* <FooterScreen /> */}
+      <FooterScreen />
     </>
   )
   // return (
