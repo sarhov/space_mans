@@ -126,12 +126,18 @@
         transform: scale(1.3);
       }
 
+      &_content {
+        align-items: center;
+      }
+
       &_heading {
+        text-align: center;
         font-size: 36px;
         line-height: 42px;
       }
 
       &_info {
+        text-align: center;
         font-size: 24px;
         line-height: 32px;
         margin-top: 20px;

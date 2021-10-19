@@ -97,15 +97,16 @@
     }
 
     @include breakpoints('1024') {
-      align-items: flex-start;
+      align-items: center;
 
       &_heading {
         font-size: 36px;
         line-height: 42px;
-        text-align: left;
+        text-align: center;
       }
 
       &_info {
+        text-align: center;
         font-size: 24px;
         line-height: 32px;
         margin-top: 30px;

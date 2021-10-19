@@ -101,6 +101,10 @@
     padding-bottom: 50px;
     align-items: flex-end;
 
+    &__container {
+      align-items: center;
+    }
+
     &::after {
       bottom: auto;
       top: 0;
@@ -118,12 +122,14 @@
 
     &__title {
       font-size: 36px;
+      text-align: center;
       line-height: 42px;
     }
 
     &__subtitle {
       font-size: 24px;
       line-height: 28px;
+      text-align: center;
       margin-top: 20px;
     }
 
