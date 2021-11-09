@@ -1,4 +1,6 @@
+import { Link } from 'gatsby'
 import React from 'react'
+import config from '../../utils/config'
 import { instagram, logo, vk, youtube } from '../../utils/icons'
 import Social from '../social'
 
@@ -30,9 +32,18 @@ const Header = (): JSX.Element => {
           </a>
         </menu>
         <div className={styles.header__socials}>
-          <Social>{vk}</Social>
-          <Social>{instagram}</Social>
-          <Social>{youtube}</Social>
+          <Link
+            to={config.socials.instagram}
+            target="_blank"
+            rel="noopener noreferrer">
+            <Social>{instagram}</Social>
+          </Link>
+          <Link
+            to={config.socials.youtube}
+            target="_blank"
+            rel="noopener noreferrer">
+            <Social>{youtube}</Social>
+          </Link>
         </div>
       </div>
     </header>

@@ -11,10 +11,9 @@
   background-position: center;
 
   @include breakpoints('1024') {
-    background: url('../../images/footer_bg_mobile.png') no-repeat;
-    background-size: 100% auto;
-    background-position: center -260px;
-    padding-top: 230px;
+    background-size: auto 75%;
+    background-position: center bottom;
+    padding-top: 120px;
   }
 
   &__container {
@@ -141,18 +140,6 @@
       }
     }
 
-    &_brands {
-      display: flex;
-      align-items: center;
-      margin-top: 52px;
-      justify-content: center;
-
-      & > svg {
-        margin: 0 21px;
-        opacity: 0.4;
-      }
-    }
-
     &_copy {
       font-style: normal;
       font-weight: 600;
@@ -160,27 +147,15 @@
       line-height: 28px;
       text-align: center;
       color: $blue_2;
-      margin-top: 52px;
+      margin-top: 40px;
     }
 
     @include breakpoints('1024') {
-      margin: 60px 0 34px;
-
-      &_brands {
-        margin-top: 60px;
-
-        svg {
-          &:nth-child(4),
-          &:nth-child(5) {
-            display: none;
-          }
-        }
-      }
+      margin: 100px 0 40px;
 
       &_copy {
         font-size: 18px;
         line-height: 28px;
-        margin-top: 60px;
       }
     }
   }

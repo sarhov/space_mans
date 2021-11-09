@@ -1,6 +1,8 @@
 import clsx from 'clsx'
+import { Link } from 'gatsby'
 import React, { ChangeEvent, ReactEventHandler, useState } from 'react'
 import Social from '../../components/social'
+import config from '../../utils/config'
 import {
   discord,
   facebook,
@@ -64,21 +66,24 @@ const FooterScreen = (): JSX.Element => {
         </div>
         <footer className={styles.footer__screen__footer}>
           <nav className={styles.footer__screen__footer_socials}>
-            <Social>{telegram}</Social>
-            <Social>{discord}</Social>
-            <Social>{instagram}</Social>
-            <Social>{twitter}</Social>
-            <Social>{youtube}</Social>
+            <Link to={config.socials.telegram}>
+              <Social>{telegram}</Social>
+            </Link>
+            <Link to={config.socials.discord}>
+              <Social>{discord}</Social>
+            </Link>
+            <Link to={config.socials.instagram}>
+              <Social>{instagram}</Social>
+            </Link>
+            <Link to={config.socials.twitter}>
+              <Social>{twitter}</Social>
+            </Link>
+            <Link to={config.socials.youtube}>
+              <Social>{youtube}</Social>
+            </Link>
           </nav>
-          <div className={styles.footer__screen__footer_brands}>
-            {nvidia}
-            {youtube_2}
-            {riot}
-            {intel}
-            {facebook}
-          </div>
           <span className={styles.footer__screen__footer_copy}>
-            UFOtoken.io © 2021, All rights reserved
+            UFOGaming.io © 2021, All rights reserved
           </span>
         </footer>
       </div>
