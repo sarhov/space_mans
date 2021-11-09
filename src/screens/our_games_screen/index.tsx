@@ -5,6 +5,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 import logo_galaxy from '../../images/logo_galaxy.png'
 import slide from '../../images/slide.png'
+import slide2 from '../../images/slide2.png'
+import slide3 from '../../images/slide3.png'
+import slide4 from '../../images/slide4.png'
+import slide5 from '../../images/slide5.png'
 
 import * as styles from './styles.module.scss'
 
@@ -32,13 +36,16 @@ const OurGamesScreen = (): JSX.Element => {
             <img src={slide} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide} />
+            <img src={slide2} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide} />
+            <img src={slide3} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide} />
+            <img src={slide4} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={slide5} />
           </SwiperSlide>
         </Swiper>
         <div className="pagination" />
