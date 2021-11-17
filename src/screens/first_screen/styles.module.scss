@@ -34,7 +34,8 @@
     left: 0;
     bottom: 0;
     position: absolute;
-    background: url('../../images/first_screen.png') no-repeat;
+    background: url('../../images/first_screen.png') no-repeat bottom center;
+    background-size: cover;
   }
 
   &__container {
