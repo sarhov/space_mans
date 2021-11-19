@@ -14,7 +14,7 @@ const InfoScreen = (): JSX.Element => {
   const breakpoints = useBreakpoint()
 
   return (
-    <div className={styles.info__screen}>
+    <div className={styles.info__screen} id="metaverse">
       <div className={styles.info__screen__container}>
         <div className={styles.info__screen__block}>
           <img width={635} src={breakpoints.md ? ufo_mobile : ufo} />

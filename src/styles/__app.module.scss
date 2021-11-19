@@ -78,9 +78,11 @@
   list-style-type: none;
 }
 
-body {
+body,
+html {
   font-family: 'SF UI Display', sans-serif;
   background: black;
+  scroll-behavior: smooth;
 }
 
 .space {

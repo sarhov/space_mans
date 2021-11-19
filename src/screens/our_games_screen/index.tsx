@@ -16,7 +16,7 @@ import 'swiper/css'
 
 const OurGamesScreen = (): JSX.Element => {
   return (
-    <div className={styles.our_games__screen}>
+    <div className={styles.our_games__screen} id="super_galactic">
       <div className={styles.our_games__screen__container}>
         <div className={styles.our_games__screen_header}>
           <h2>OUR GAMES</h2>

@@ -10,7 +10,7 @@ import * as styles from './styles.module.scss'
 
 const AdvantageScreen = (): JSX.Element => {
   return (
-    <div className={styles.advantage__screen}>
+    <div className={styles.advantage__screen} id="ecosystem">
       <div className={styles.advantage__screen__container}>
         <div className={styles.advantage__screen_block}>
           <img src={genesis} alt="" />

@@ -61,7 +61,17 @@ const Header = (): JSX.Element => {
             <Link
               onClick={clickLink}
               className={styles.header__menu_item}
-              to="#">
+              to="https://ufo-gaming.gitbook.io/ufo-gaming/"
+              target="_blank"
+              rel="noopener noreferrer">
+              <span className={styles.header__menu_item_container}>
+                ABOUT US
+              </span>
+            </Link>
+            <Link
+              onClick={clickLink}
+              className={styles.header__menu_item}
+              to="#ecosystem">
               <span className={styles.header__menu_item_container}>
                 ECOSYSTEM
               </span>
@@ -69,7 +79,7 @@ const Header = (): JSX.Element => {
             <Link
               onClick={clickLink}
               className={styles.header__menu_item}
-              to="#">
+              to="#metaverse">
               <span className={styles.header__menu_item_container}>
                 METAVERSE
               </span>
@@ -77,7 +87,7 @@ const Header = (): JSX.Element => {
             <Link
               onClick={clickLink}
               className={styles.header__menu_item}
-              to="#">
+              to="#super_galactic">
               <span className={styles.header__menu_item_container}>
                 SUPER GALACTIC
               </span>
@@ -125,27 +135,14 @@ const Header = (): JSX.Element => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.header__menu_item__menu_container_item}
-                    to="https://blockfolio.com/coin/UFO_2">
+                    to="https://www.coingecko.com/en/coins/ufo-gaming">
                     <div
                       className={
                         styles.header__menu_item__menu_container_item_image
                       }>
-                      <img src={FTX} alt="FTX" />
+                      <img src={Coin_Gecko} alt="Coin_Gecko" />
                     </div>
-                    FTX
-                  </Link>
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.header__menu_item__menu_container_item}
-                    to="https://app.uniswap.org/#/swap?outputCurrency=0x249e38ea4102d0cf8264d3701f1a0e39c4f2dc3b&use=V2">
-                    <div
-                      className={
-                        styles.header__menu_item__menu_container_item_image
-                      }>
-                      <img src={Uniswap} alt="Uniswap" />
-                    </div>
-                    Uniswap
+                    Coin Gecko
                   </Link>
                   <Link
                     target="_blank"
@@ -164,19 +161,6 @@ const Header = (): JSX.Element => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.header__menu_item__menu_container_item}
-                    to="https://www.coingecko.com/en/coins/ufo-gaming">
-                    <div
-                      className={
-                        styles.header__menu_item__menu_container_item_image
-                      }>
-                      <img src={Coin_Gecko} alt="Coin_Gecko" />
-                    </div>
-                    Coin Gecko
-                  </Link>
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.header__menu_item__menu_container_item}
                     to="https://shibaswap.com/#/add/ETH/0x249e38Ea4102D0cf8264d3701f1a0E39C4f2DC3B">
                     <div
                       className={
@@ -189,22 +173,6 @@ const Header = (): JSX.Element => {
                 </div>
               </div>
             </div>
-            <Link
-              onClick={clickLink}
-              className={styles.header__menu_item}
-              to="#">
-              <span className={styles.header__menu_item_container}>
-                STAKING
-              </span>
-            </Link>
-            <Link
-              onClick={clickLink}
-              className={styles.header__menu_item}
-              to="#">
-              <span className={styles.header__menu_item_container}>
-                ABOUT US
-              </span>
-            </Link>
           </div>
         </menu>
         <div

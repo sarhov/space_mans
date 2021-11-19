@@ -6,6 +6,7 @@ import gnom_mobile from '../../images/gnom_mobile.png'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 
 import * as styles from './styles.module.scss'
+import { Link } from 'gatsby'
 
 const FirstScreen = (): JSX.Element => {
   const breakpoints = useBreakpoint()
@@ -37,9 +38,13 @@ const FirstScreen = (): JSX.Element => {
         <span className={styles.first__screen__subtitle}>
           The truth is out there…
         </span>
-        <button className={styles.first__screen__watch}>
+        <Link
+          to="https://www.youtube.com/watch?v=bwUlP_Oeq94&ab_channel=UFOGamingOfficial"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.first__screen__watch}>
           {play}Watch video
-        </button>
+        </Link>
         <img
           className={styles.first__screen__hero}
           src={breakpoints.md ? gnom_mobile : gnom}
