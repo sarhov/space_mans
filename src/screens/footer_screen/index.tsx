@@ -47,6 +47,7 @@ const FooterScreen = (): JSX.Element => {
     var form = document.getElementById("form");
     let formLoading = document.querySelector('#formLoading');
     let formSubmitButton = document.querySelector('#formSubmitButton');
+    let formSuccessMessage = document.querySelector('#formSuccessMessage');
     form.addEventListener("submit", formSubmit);
 
     function formSubmit(e) {
@@ -69,6 +70,7 @@ const FooterScreen = (): JSX.Element => {
           form.classList.remove('loading');
           formLoading.style.cssText = "opacity:0; visibility: hidden;"
           formSubmitButton.style.cssText = "opacity:1";
+          formSuccessMessage.style.display = "block";
           document.querySelector('input[name="email"]').value = ''
         })
         .catch(error => console.log(error))
@@ -103,6 +105,7 @@ const FooterScreen = (): JSX.Element => {
               <div className={styles.lds__dual__ring}></div>
             </div>
             </form>
+            <div id="formSuccessMessage" className={styles.success__message}>Confirmed! You’re in!</div>
           </div>
         </div>
         <footer className={styles.footer__screen__footer}>
