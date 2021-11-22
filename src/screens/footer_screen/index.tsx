@@ -43,6 +43,35 @@ const FooterScreen = (): JSX.Element => {
     setInput(value)
   }
 
+  const SubmitForm = () =>{
+    var form = document.getElementById("form");
+    let formLoading = document.querySelector('#formLoading');
+    form.addEventListener("submit", formSubmit);
+
+    function formSubmit(e) {
+        e.preventDefault()
+
+        const formData = new FormData();
+        formData.append(
+            'email',
+            document.querySelector('input[name="email"]').value
+        )
+        form.classList.add('loading');
+        formLoading.style.cssText = "opacity:1; visibility: visible;"
+        fetch("https://getform.io/f/656ff1c4-4566-41b7-81d9-e8d69c7a9cf3",
+        {
+            method: "POST",
+            body: formData,
+        })
+        .then(response => {
+          form.classList.remove('loading');
+          formLoading.style.cssText = "opacity:0; visibility: hidden;"
+          document.querySelector('input[name="email"]').value == ''
+        })
+        .catch(error => console.log(error))
+        }
+  }
+
   return (
     <div className={styles.footer__screen}>
       <div className={styles.footer__screen__container}>
@@ -53,15 +82,22 @@ const FooterScreen = (): JSX.Element => {
             Galactic Beta.
           </p>
           <div className={styles.footer__screen__form_input}>
+            <form id="form" className={styles.footer__screen__form_form}>
             <input
               className={styles.footer__screen__form_input_field}
               placeholder="email"
               value={input}
               onChange={handleChange}
+              name="email"
+              required
+              pattern="[a-zA-Z0-9.-_+-]{1,}@[a-zA-Z.-]{1,}[.]{1}[a-zA-Z]{2,}"
+              type="email"
             />
-            <button className={styles.footer__screen__form_input_button}>
+            <button className={styles.footer__screen__form_input_button} onClick={SubmitForm}>
               {plane}
             </button>
+            <div id="formLoading" className={styles.footer__screen__form_loading}> </div>
+            </form>
           </div>
         </div>
         <footer className={styles.footer__screen__footer}>
