@@ -1,7 +1,7 @@
 import { Link } from 'gatsby'
 import React, { useEffect, useState } from 'react'
 import config from '../../utils/config'
-import { instagram, logo, vk, youtube } from '../../utils/icons'
+import { instagram, logo, vk, youtube, telegram, discord, twitter } from '../../utils/icons'
 import Social from '../social'
 import Etherscan from '../../images/Etherscan.png'
 import Dex_Tools from '../../images/Dex_Tools.png'
@@ -186,11 +186,29 @@ const Header = (): JSX.Element => {
           <div className={styles.header__burger_bar3} />
         </div>
         <div className={styles.header__socials}>
+          <Link 
+            to={config.socials.telegram}
+            target="_blank"
+            rel="noopener noreferrer">
+            <Social>{telegram}</Social>
+          </Link>
+          <Link 
+            to={config.socials.discord}
+            target="_blank"
+            rel="noopener noreferrer">
+            <Social>{discord}</Social>
+          </Link>
           <Link
             to={config.socials.instagram}
             target="_blank"
             rel="noopener noreferrer">
             <Social>{instagram}</Social>
+          </Link>
+          <Link
+            to={config.socials.twitter}
+            target="_blank"
+            rel="noopener noreferrer">
+            <Social>{twitter}</Social>
           </Link>
           <Link
             to={config.socials.youtube}
