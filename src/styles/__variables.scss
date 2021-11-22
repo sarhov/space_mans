@@ -33,3 +33,12 @@ $greenGradient: linear-gradient(305deg, #a7ff23 -25.18%, #21fffd 100%);
     }
   }
 }
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

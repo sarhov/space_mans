@@ -46,6 +46,7 @@ const FooterScreen = (): JSX.Element => {
   const SubmitForm = () =>{
     var form = document.getElementById("form");
     let formLoading = document.querySelector('#formLoading');
+    let formSubmitButton = document.querySelector('#formSubmitButton');
     form.addEventListener("submit", formSubmit);
 
     function formSubmit(e) {
@@ -58,6 +59,7 @@ const FooterScreen = (): JSX.Element => {
         )
         form.classList.add('loading');
         formLoading.style.cssText = "opacity:1; visibility: visible;"
+        formSubmitButton.style.cssText = "opacity:0"
         fetch("https://getform.io/f/656ff1c4-4566-41b7-81d9-e8d69c7a9cf3",
         {
             method: "POST",
@@ -66,7 +68,8 @@ const FooterScreen = (): JSX.Element => {
         .then(response => {
           form.classList.remove('loading');
           formLoading.style.cssText = "opacity:0; visibility: hidden;"
-          document.querySelector('input[name="email"]').value == ''
+          formSubmitButton.style.cssText = "opacity:1";
+          document.querySelector('input[name="email"]').value = ''
         })
         .catch(error => console.log(error))
         }
@@ -93,10 +96,12 @@ const FooterScreen = (): JSX.Element => {
               pattern="[a-zA-Z0-9.-_+-]{1,}@[a-zA-Z.-]{1,}[.]{1}[a-zA-Z]{2,}"
               type="email"
             />
-            <button className={styles.footer__screen__form_input_button} onClick={SubmitForm}>
+            <button  id="formSubmitButton" className={styles.footer__screen__form_input_button} onClick={SubmitForm}>
               {plane}
             </button>
-            <div id="formLoading" className={styles.footer__screen__form_loading}> </div>
+            <div id="formLoading" className={styles.footer__screen__form_loading}> 
+              <div className={styles.lds__dual__ring}></div>
+            </div>
             </form>
           </div>
         </div>
