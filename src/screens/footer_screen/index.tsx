@@ -49,8 +49,8 @@ const FooterScreen = (): JSX.Element => {
         <div className={styles.footer__screen__form}>
           <h2 className={styles.footer__screen__form_heading}>Registration</h2>
           <p className={styles.footer__screen__form_info}>
-            Register here to be one of the first to getaccess to the Super
-            Galactic Beta version.
+            Register here to be one of the first to get & access to the Super
+            Galactic Beta.
           </p>
           <div className={styles.footer__screen__form_input}>
             <input
