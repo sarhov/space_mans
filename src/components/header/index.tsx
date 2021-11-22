@@ -129,7 +129,7 @@ const Header = (): JSX.Element => {
                       }>
                       <img src={Dex_Tools} alt="Dex_Tools" />
                     </div>
-                    Dex Tools
+                    Dextools
                   </Link>
                   <Link
                     target="_blank"
@@ -142,7 +142,7 @@ const Header = (): JSX.Element => {
                       }>
                       <img src={Coin_Gecko} alt="Coin_Gecko" />
                     </div>
-                    Coin Gecko
+                    CoinGecko
                   </Link>
                   <Link
                     target="_blank"
@@ -155,7 +155,7 @@ const Header = (): JSX.Element => {
                       }>
                       <img src={Coin_Market_Cap} alt="Coin_Market_Cap" />
                     </div>
-                    Coin Market Cap
+                    CoinMarketCap
                   </Link>
                   <Link
                     target="_blank"
@@ -168,7 +168,7 @@ const Header = (): JSX.Element => {
                       }>
                       <img src={Shiba_Swap} alt="Shiba_Swap" />
                     </div>
-                    Shiba Swap
+                    ShibaSwap
                   </Link>
                 </div>
               </div>
