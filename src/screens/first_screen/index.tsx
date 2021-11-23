@@ -31,7 +31,7 @@ const FirstScreen = (): JSX.Element => {
     <div className={styles.first__screen}>
       <div className={styles.first__screen__container}>
         <h2 className={styles.first__screen__title}>
-          WELCOME TO
+          WELCOME TO THE
           <br />
           DARK METAVERSE
         </h2>
