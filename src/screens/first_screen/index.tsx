@@ -43,7 +43,7 @@ const FirstScreen = (): JSX.Element => {
           target="_blank"
           rel="noopener noreferrer"
           className={styles.first__screen__watch}>
-          {play}Watch video
+          {play}Watch Trailer
         </Link>
         <img
           className={styles.first__screen__hero}
